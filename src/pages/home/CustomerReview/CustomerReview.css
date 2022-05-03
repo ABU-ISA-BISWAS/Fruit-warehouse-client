@@ -1,0 +1,28 @@
+.style{
+    display: flex;
+    width: 50%;
+    
+}
+.style p{
+    background-color: green;
+    height: 4px;
+    width: 50%;
+    margin: 15px;
+}
+.review-container{
+    width: 50%;  
+}
+.review{
+    text-align: left;
+    width: 50%;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.review p{
+    font-size: 14px;
+}
+.review h4{
+    font-size: 20px;
+    font-weight: 700;
+    color: blue;
+}

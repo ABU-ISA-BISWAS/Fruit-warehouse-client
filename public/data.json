@@ -1,0 +1,103 @@
+[
+    
+    
+    
+    {  
+        "name": "Cherry",
+        "price": "15",
+        "supplier": "James R. Donahue",
+        "quantity": "140",
+        "description": "A cherry is the fruit of many plants of the genus Prunus, and is a fleshy drupe (stone fruit). ",
+        "img": "https://i.ibb.co/6y2gD7t/Cherry.webp "
+    },
+    {  
+        "name": "Guava",
+        "price": "25",
+        "supplier": "Mark E. Veloz",
+        "quantity": "200",
+        "description": "Guava fruits are amazingly rich in antioxidants, vitamin C, potassium, and fiber. This remarkable nutrient content gives them many health benefits. ",
+        "img": "https://i.ibb.co/7g2Qdww/Guava.webp "
+    },
+    {  
+        "name": "Banana",
+        "price": "10",
+        "supplier": "Jason J. Smith",
+        "quantity": "100",
+        "description": "A banana is an elongated, edible fruit botanically a berry produced by several kinds of large herbaceous flowering plants in the genus Musa. ",
+        "img": "https://i.ibb.co/pKNynY9/banana.webp "
+    },
+    {  
+        "name": "Jackfruit",
+        "price": "10",
+        "supplier": "Stephen P. Hanson",
+        "quantity": "50",
+        "description": "Jackfruit is a tropical tree fruit grown in Asia, Africa and South America. ",
+        "img": "https://i.ibb.co/yyXYvqt/Jackfruit.webp"
+    },
+    {  
+        "name": "Coconut",
+        "price": "8",
+        "supplier": "James L. Thompson",
+        "quantity": "80",
+        "description": " Coconut flesh is high in fat and can be dried or eaten fresh or processed into coconut milk or coconut oil. ",
+        "img": "https://i.ibb.co/K7RBrCZ/Coconut.webp"
+    },
+    {  
+        "name": "Papaya",
+        "price": "12",
+        "supplier": "Tomas D. Morales",
+        "quantity": "50",
+        "description": " Papayas grow in tropical climates and are also known as papaws or pawpaws. Their sweet taste, vibrant color. ",
+        "img": "https://i.ibb.co/GR968VQ/Papaya.webp"
+    },
+    {  
+        "name": "Grapes",
+        "price": "30",
+        "supplier": "John F. Walker",
+        "quantity": "200",
+        "description": "A grape is a fruit, botanically a berry, of the deciduous woody vines of the flowering plant genus Vitis. ",
+        "img": "https://i.ibb.co/pdrV8vM/Grapes.webp "
+    },
+    {  
+        "name": "Lychee",
+        "price": "25",
+        "supplier": "Jose W. Alarcon",
+        "quantity": "180",
+        "description": "Lychee is a monotypic taxon and the sole member in the genus Litchi in the soapberry family, Sapindaceae. ",
+        "img": "https://i.ibb.co/0ZbvBc9/Lychee.webp "
+    },
+    {  
+        "name": "Mango",
+        "price": "10",
+        "supplier": "Reuben T. Daily",
+        "quantity": "200",
+        "description": "Worldwide, there are several hundred cultivars of mango. Depending on the cultivar, mango fruit varies in size, shape, sweetness, skin color, and flesh color which may be pale yellow, gold, green, or orange. ",
+        "img": "https://i.ibb.co/PjVsMch/mango.webp "
+    },
+    {  
+        "name": "Orange",
+        "price": "10",
+        "supplier": "Mark A. Harris",
+        "quantity": "100",
+        "description": "An orange is a fruit of various citrus species in the family Rutaceae; it primarily refers to Citrus  sinensis, which is also called sweet orange, to distinguish it from the related Citrus  aurantium, referred to as bitter orange. ",
+        "img": "https://i.ibb.co/pPQGt9y/orange.webp "
+    },
+    {  
+        "name": "Apple",
+        "price": "20",
+        "supplier": "Peter J. Fenderson",
+        "quantity": "150",
+        "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus. ",
+        "img": "https://i.ibb.co/R4YWTPg/Apple.webp "
+    },
+    {  
+        "name": "Strawberrie",
+        "price": "10",
+        "supplier": "Wanda E. Morgan",
+        "quantity": "100",
+        "description": "Strawberries are native to the temperate regions of the Northern Hemisphere, and cultivated varieties are widely grown throughout the world. ",
+        "img": "https://i.ibb.co/NpmRsbg/strawberrie.webp "
+    }
+
+
+]
