@@ -1,0 +1,44 @@
+.inventory-container{
+    display: flex;
+    background-image: url("https://i.ibb.co/XzjS7h2/bgg.jpg");
+}
+.fruit-container{
+    width: 30%;
+    border: 2px solid rgb(221, 238, 216);
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    margin: 20px;
+    margin-left: 80px;
+    contain: content;
+}
+.image{
+    height: 180px;
+    width: 380px;
+}
+.delivered{
+    background-color: rgb(206, 247, 206);
+    color: rgb(9, 54, 7);
+    font-weight: 500;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 5px;
+}
+.delivered:hover{
+    background-color: rgb(6, 63, 6);
+    color: rgb(250, 253, 250);
+    
+}
+.form-container{
+    margin-left: 50px;
+    margin-top: 20px;
+    width: 25%;
+}
+.manage-inventory{
+    margin-left: 250px;
+    margin-top: 10px;
+}
+.button:hover{
+    background-color: blue;
+    color: white;
+}

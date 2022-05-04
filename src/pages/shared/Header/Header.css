@@ -1,0 +1,11 @@
+.header{
+    margin-bottom: 0;
+}
+.manage-button{
+    background-color: rgb(58, 57, 57);
+    color: white;
+}
+.manage-button:hover{
+    background-color: rgb(243, 227, 227);
+    color: rgb(15, 14, 14);
+}

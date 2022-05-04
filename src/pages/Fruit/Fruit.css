@@ -1,5 +1,5 @@
 .fruit{
-    border: 2px solid rgb(203, 231, 194);
+    border: 2px solid rgb(221, 238, 216);
     border-radius: 5px;
     padding-bottom: 10px;
     text-align: center;
@@ -10,6 +10,7 @@
 .position{
     position: fixed;
     bottom: 10px;
-    left: 35%;
-    margin-top: 20px;
+    left: 5%;
+    width: 90%;
+    
 }

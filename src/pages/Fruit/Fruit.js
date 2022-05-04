@@ -5,10 +5,10 @@ import './Fruit.css';
 
 const Fruit = ({fruit}) => {
     const {_id,name,img,description,price,quantity,supplier}=fruit;
-    // const navigate=useNavigate();
-    // const navigateToServiceDetail=id=>{
-    //     navigate(`/fruit/${id}`)
-    // }
+    const navigate=useNavigate();
+    const navigateToServiceDetail=id=>{
+        navigate(`/inventory/${id}`)
+    }
     return (
         <div className='fruit'>
             <img className='w-100' src={img} alt="" />
@@ -17,8 +17,8 @@ const Fruit = ({fruit}) => {
             <p className='fs-6 fw-bold'>Quantity:{quantity}</p>
             <p className='text-primary'>Supplier Name: {supplier}</p>
             <p className='mb-5 '><small>{description}</small></p>
-            <button className=' btn btn-primary position'>Manage</button>
-            {/* <button onClick={()=>navigateToServiceDetail(_id)} className='btn btn-primary'>Book:{name}</button> */}
+            <button onClick={()=>navigateToServiceDetail(_id)} className=' btn btn-success position'>Manage</button>
+            
         </div>
     );
 };

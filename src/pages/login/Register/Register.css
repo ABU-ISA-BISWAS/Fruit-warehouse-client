@@ -1,0 +1,20 @@
+.register-container{
+    background-image: url("https://i.ibb.co/XzjS7h2/bgg.jpg");
+}
+.register-form{
+    margin: 0 auto;
+    width: 30%;
+}
+.register-form input:not([type=checkbox]){
+
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding-left: 15px;
+    font-size: 16px;
+    border: 1px solid lightgray;
+    margin-bottom: 15px;
+    border-radius: 5px;
+
+
+}

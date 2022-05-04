@@ -10,12 +10,12 @@ import Off from '../Off/Off';
 const Home = () => {
     return (
         <div>
-            <Header></Header>
+            
             <Banner></Banner>
             <Fruits></Fruits>
             <Off></Off>
             <CustomerReview></CustomerReview>
-            <Footer></Footer>
+            
         </div>
     );
 };
