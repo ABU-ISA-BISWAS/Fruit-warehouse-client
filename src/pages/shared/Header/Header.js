@@ -37,8 +37,36 @@ const Header = () => {
                         {
                                         user ?
                                         <Nav.Link as={Link} to="/manage-inventory">
-                                        <button className='btn manage-button'>Manage Inventory</button>
+                                        <button className='btn manage-button btn-success'>Manage Inventory</button>
+                                        
                                         </Nav.Link>
+                                        
+                                    :
+                                    <></>
+                                    }
+                           
+                        </Nav>
+                        <Nav>
+                        {
+                                        user ?
+                                        <Nav.Link as={Link} to="/add-new-item">
+                                        
+                                        <button className='btn manage-button btn-success'>Add Item</button>
+                                        </Nav.Link>
+                                        
+                                    :
+                                    <></>
+                                    }
+                           
+                        </Nav>
+                        <Nav>
+                        {
+                                        user ?
+                                        <Nav.Link as={Link} to="/my-item">
+                                        
+                                        <button className='btn manage-button btn-success'>My Items</button>
+                                        </Nav.Link>
+                                        
                                     :
                                     <></>
                                     }

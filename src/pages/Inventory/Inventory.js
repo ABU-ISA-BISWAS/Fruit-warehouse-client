@@ -68,8 +68,8 @@ const Inventory = () => {
             <div className='form-container'>
                 <p className='fw-bold fs-3 text-primary'>Restock the item</p>
                 <form onSubmit={handleRestock} >
-                    <input type="number" name='number' placeholder='Enter quantity' />
-                    <input className=' btn btn-info ms-2' type="submit" value="Restock" />
+                    <input id='restock-input'  type="number" name='number' placeholder='Enter quantity' />
+                    <input className=' btn btn-success ms-2' type="submit" value="Restock" />
                 </form>
             </div>
             <div className='text-center manage-inventory'>

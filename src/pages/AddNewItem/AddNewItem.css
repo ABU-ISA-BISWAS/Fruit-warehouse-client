@@ -1,0 +1,22 @@
+.addItemForm input,textarea{
+    border: 2px solid green;
+    border-radius: 5px;
+}
+.addItemContainer{
+    background-image: url("https://i.ibb.co/XzjS7h2/bgg.jpg");
+}
+
+#submit{
+    padding: 3px;
+    background-color: green;
+    color: white;
+    margin-top: 10px;
+    
+}
+#submit:hover{
+    
+    background-color: rgb(79, 202, 79);
+    color: white;
+   
+    
+}

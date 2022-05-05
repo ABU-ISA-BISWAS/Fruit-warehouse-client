@@ -12,6 +12,11 @@
     margin-left: 80px;
     contain: content;
 }
+#restock-input{
+    border: 2px solid green;
+    border-radius: 5px;
+    padding: 2px;
+}
 .image{
     height: 180px;
     width: 380px;

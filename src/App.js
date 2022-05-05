@@ -8,6 +8,8 @@ import RequireAuth from './pages/login/RequireAuth/RequireAuth';
 import Footer from './pages/shared/Footer/Footer';
 import Inventory from './pages/Inventory/Inventory';
 import ManageInventory from './pages/ManageInventory/ManageInventory';
+import UpdateProduct from './pages/UpdateProduct/UpdateProduct';
+import AddNewItem from './pages/AddNewItem/AddNewItem';
 
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
         <Route path='/inventory/:fruitId' element={<RequireAuth><Inventory></Inventory></RequireAuth>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/manage-inventory' element={<RequireAuth><ManageInventory></ManageInventory></RequireAuth>}></Route>
+        <Route path='/update-data/:fruitId' element={<RequireAuth><UpdateProduct></UpdateProduct></RequireAuth>}></Route>
+        <Route path='/add-new-item' element={<RequireAuth><AddNewItem></AddNewItem></RequireAuth>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
       </Routes>
       <Footer></Footer>
