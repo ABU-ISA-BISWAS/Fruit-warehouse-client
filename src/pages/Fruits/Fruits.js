@@ -12,14 +12,16 @@ const Fruits = () => {
             .then(data => setFruits(data))
     }, []);
     
+    
     return (
         <div className='fruits'>
+            
             <h2 className='fruits-title mb-5 mt-5 fs-1 fw-bold'>Trending Fruits</h2>
 
             <div className=' fruits-container'>
 
                 {
-                    fruits.slice(6).map(fruit => <Fruit
+                    fruits.slice(-6).map(fruit => <Fruit
                         key={fruit._id}
                         fruit={fruit}
                     ></Fruit>)

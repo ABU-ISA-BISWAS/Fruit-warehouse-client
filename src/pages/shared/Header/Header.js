@@ -14,8 +14,8 @@ const Header = () => {
     const [user] = useAuthState(auth);
 
     return (
-        <div className='header'>
-            <Navbar collapseOnSelect expand="lg" sticky='top' bg="dark" variant="dark">
+        <>
+            <Navbar  collapseOnSelect  sticky="top" expand="lg" bg="dark" variant="dark">
                 <Container>
                     <Navbar.Brand as={Link} to="/">
                         <img height={50} src={logo} alt="" />
@@ -61,7 +61,7 @@ const Header = () => {
             </Navbar>
 
 
-        </div>
+        </>
     );
 };
 

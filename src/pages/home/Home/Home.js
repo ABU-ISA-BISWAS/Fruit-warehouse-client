@@ -9,14 +9,14 @@ import Off from '../Off/Off';
 
 const Home = () => {
     return (
-        <div>
+        <>
             
             <Banner></Banner>
             <Fruits></Fruits>
             <Off></Off>
             <CustomerReview></CustomerReview>
             
-        </div>
+        </>
     );
 };
 
