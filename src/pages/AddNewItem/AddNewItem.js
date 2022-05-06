@@ -6,9 +6,9 @@ import './AddNewItem.css';
 
 const AddNewItem = () => {
     const [user] = useAuthState(auth);
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit,reset } = useForm();
     const onSubmit = data => {
-      console.log(data);
+      
       const url =`http://localhost:5000/fruit`;
       fetch(url,{
           method:'POST',
@@ -18,9 +18,8 @@ const AddNewItem = () => {
           body: JSON.stringify(data)
       })
       .then(res=>res.json())
-      .then(result=>{
-          console.log(result);
-      })
+      .then(result=>{})
+      reset();
     };
     return (
        <div className='addItemContainer'>

@@ -64,7 +64,8 @@ const ManageInventory = () => {
                             <th>Product Name</th>
                             <th>Price</th>
                             <th>Quantity</th>
-                            <th>Delete</th>
+                            <th>Supplier Name</th>
+                            <th>Delete or Update</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -73,6 +74,7 @@ const ManageInventory = () => {
                                 <td>{fruit.name}</td>
                                 <td>{fruit.price}</td>
                                 <td>{fruit.quantity}</td>
+                                <td>{fruit.supplier}</td>
                                 <td>
                                     <div key={fruit._id} >
                                         <button className='btn btn-danger me-2' onClick={() => handleDelete(fruit._id)}>Delete</button>
