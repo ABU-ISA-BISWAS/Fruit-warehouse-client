@@ -8,12 +8,14 @@ import './Login.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loading from '../../shared/Loading/Loading';
+import axios from 'axios';
 
 
 const Login = () => {
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
     let errorElement;
+    let errorElement1;
     const [sendPasswordResetEmail, sending, error] = useSendPasswordResetEmail(auth);
     const [
         signInWithEmailAndPassword,
@@ -25,11 +27,14 @@ const Login = () => {
     const passwordlRef = useRef({});
     const navigate = useNavigate();
 
-    const handleSubmit = event => {
+    const handleSubmit =async event => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordlRef.current.value;
-        signInWithEmailAndPassword(email, password);
+        await signInWithEmailAndPassword(email, password);
+        const {data}= await axios.post('http://localhost:5000/login',{email});
+        localStorage.setItem('token',data.token);
+        navigate(from, { replace: true });
     }
 
     if (loading || sending) {
@@ -37,12 +42,16 @@ const Login = () => {
     }
 
     if (user) {
-        navigate(from, { replace: true });
+        // navigate(from, { replace: true });
     }
 
     if (error) {
         errorElement =
-            <p className='text-danger'>Error: {error.message}</p>
+        <p className='text-danger'>Error: {error.message}</p>
+    }
+    if (error1) {
+        errorElement1 =
+        <p className='text-danger'>Error: {error1.message}</p>
     }
     const navigateRegister = event => {
         navigate('/register');
@@ -68,6 +77,7 @@ const Login = () => {
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     
                     <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
+                    
 
                 </Form.Group>
 
@@ -79,11 +89,13 @@ const Login = () => {
                 <Button variant="primary w-50 mx-auto d-block mb-2" type="submit">
                     Login
                 </Button>
+                {errorElement1}
 
             </Form>
             <p> New to Fruits Warehouse ? <span className='please-register text-primary' onClick={navigateRegister}>Please Register</span></p>
             <p> Forget Password ? <span className='please-register text-primary' onClick={resetPassword}>Reset Password</span></p>
             {errorElement}
+           
             <SocialLogin></SocialLogin>
             <ToastContainer />
             {/* <PageTitle title="Login"></PageTitle> */}

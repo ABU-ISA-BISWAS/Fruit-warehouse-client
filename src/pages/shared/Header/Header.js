@@ -62,7 +62,7 @@ const Header = () => {
                         <Nav>
                         {
                                         user ?
-                                        <Nav.Link as={Link} to="/my-item">
+                                        <Nav.Link as={Link} to="/myitems">
                                         
                                         <button className='btn manage-button btn-success'>My Items</button>
                                         </Nav.Link>
