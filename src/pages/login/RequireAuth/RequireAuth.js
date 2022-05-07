@@ -4,6 +4,7 @@ import { Navigate, useLocation } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../../firebase.init';
 import Loading from '../../shared/Loading/Loading';
+import './RequireAuth.css';
 
 
 const RequireAuth = ({ children }) => {
@@ -18,7 +19,7 @@ const RequireAuth = ({ children }) => {
     return <Navigate to="/login" state={{ from: location }}></Navigate>
   }
   if (!user.emailVerified) {
-    return <div>
+    return <div className='not-verified '>
       <h3 className='text-danger'>Your Email is not verified!!</h3>
       <h5 className='text-success'>Please verify your email address</h5>
       <button className='btn btn-primary'

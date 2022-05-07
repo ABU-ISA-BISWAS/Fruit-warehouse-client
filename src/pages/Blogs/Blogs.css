@@ -1,0 +1,15 @@
+.blogs-container {
+    text-align: left;
+    background-image: url("https://i.ibb.co/XzjS7h2/bgg.jpg");
+    padding-bottom: 2.5rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.blogs {
+    width: 75%;
+    margin-top: 15px;
+}
+
+.blogs h4 {
+    font-weight: 600;
+}

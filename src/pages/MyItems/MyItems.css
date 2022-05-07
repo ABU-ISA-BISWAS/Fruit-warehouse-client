@@ -1,6 +1,12 @@
-.itemImage{
+.itemImage {
     height: 60px;
     width: 60px;
     border-radius: 10%;
     margin-right: 10px;
+}
+
+.myItem {
+    padding-bottom: 2.5rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
 }

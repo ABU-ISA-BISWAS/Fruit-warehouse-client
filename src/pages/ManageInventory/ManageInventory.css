@@ -6,4 +6,25 @@
 }
 .inventory-management{
     background-image: url("https://i.ibb.co/XzjS7h2/bgg.jpg");
+    padding-bottom: 2.5rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+@media only screen and (max-width:576px) {
+    .data-table{
+        margin: 0px;
+        width: 95%;
+        margin-top: 5px;
+        
+        
+    }
+    .data-table button{
+        margin-right: 0px;
+        margin-bottom: 8px;   
+        
+    }
+    
+    .inventory-management{
+       width: 100%;
+    }
 }

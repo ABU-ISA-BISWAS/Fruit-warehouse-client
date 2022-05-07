@@ -1,0 +1,29 @@
+.about {
+    background-image: url("https://i.ibb.co/XzjS7h2/bgg.jpg");
+    padding-bottom: 2.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.myImage {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+
+}
+
+@media only screen and (max-width:576px) {
+    .myImage {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+    
+    }
+}
+@media only screen and (min-width:577px)and (max-width:992px) {
+    .myImage {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+    
+    }
+}

@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import './UpdateProduct.css';
 
 const UpdateProduct = () => {
     const { fruitId } = useParams();
     const [fruit, setFruit] = useState({});
-    const navigate = useNavigate();
-
+  
     useEffect(() => {
         const url = `http://localhost:5000/fruit/${fruitId}`;
         fetch(url)
@@ -33,14 +32,13 @@ const UpdateProduct = () => {
         })
             .then(res => res.json())
             .then(data => { })
-
-
+            e.target.reset();
 
     }
 
     return (
         <div>
-            <div className='inventory-container'>
+            <div className='update-price-container inventory-container'>
 
                 <div className='fruit-container'>
                     <img className='product-image' src={fruit.img} alt="" />

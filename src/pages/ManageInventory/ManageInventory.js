@@ -1,25 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './ManageInventory.css';
 
 const ManageInventory = () => {
     const [fruits, setFruits] = useState([]);
-    // const [fruit, setFruit] = useState([]);
-    // useEffect(() => {
-    //     fetch('http://localhost:5000/fruit')
-    //         .then(res => res.json())
-    //         .then(data => setFruits(data))
-    // }, []);
 
     const navigate=useNavigate();
-    const navigateToServiceDetail=id=>{
+    const navigateToUpdate=id=>{
         navigate(`/update-data/${id}`)
     }
     const navigateToAddItem=()=>{
         navigate('/add-new-item')
     }
-
 
     useEffect(() => {
         fetch('http://localhost:5000/fruit')
@@ -47,10 +40,7 @@ const ManageInventory = () => {
                 })
         }
     }
-
-    
-
-//    console.log(fruit._id)
+   
 
     return (
         <div className='inventory-management'>
@@ -64,7 +54,7 @@ const ManageInventory = () => {
                             <th>Product Name</th>
                             <th>Price</th>
                             <th>Quantity</th>
-                            <th>Supplier Name</th>
+                            
                             <th>Delete or Update</th>
                         </tr>
                     </thead>
@@ -74,13 +64,13 @@ const ManageInventory = () => {
                                 <td>{fruit.name}</td>
                                 <td>{fruit.price}</td>
                                 <td>{fruit.quantity}</td>
-                                <td>{fruit.supplier}</td>
+                                
                                 <td>
                                     <div key={fruit._id} >
-                                        <button className='btn btn-danger me-2' onClick={() => handleDelete(fruit._id)}>Delete</button>
+                                        <button id='delete-btn' className='btn btn-danger me-2' onClick={() => handleDelete(fruit._id)}>Delete</button>
 
                                         
-                                            <button onClick={()=>navigateToServiceDetail(fruit._id)} className='btn btn-success'>Update Price</button>
+                                            <button onClick={()=>navigateToUpdate(fruit._id)} className='btn btn-success'>Update</button>
                                             
                                         
                                     </div>

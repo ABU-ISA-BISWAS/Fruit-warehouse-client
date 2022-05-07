@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Button, Form } from 'react-bootstrap';
+import { Button, Form, FormLabel } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
@@ -16,24 +16,27 @@ const Login = () => {
     let from = location.state?.from?.pathname || "/";
     let errorElement;
     let errorElement1;
-    const [sendPasswordResetEmail, sending, error] = useSendPasswordResetEmail(auth);
+    const [sendPasswordResetEmail, sending, error1] = useSendPasswordResetEmail(auth);
     const [
         signInWithEmailAndPassword,
         user,
         loading,
-        error1,
+        error,
     ] = useSignInWithEmailAndPassword(auth);
     const emailRef = useRef({});
     const passwordlRef = useRef({});
     const navigate = useNavigate();
 
-    const handleSubmit =async event => {
+    const handleSubmit = async event => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordlRef.current.value;
         await signInWithEmailAndPassword(email, password);
-        const {data}= await axios.post('http://localhost:5000/login',{email});
-        localStorage.setItem('token',data.token);
+        const { data } = await axios.post('http://localhost:5000/login', { email });
+        localStorage.setItem('token', data.token);
+        
+    }
+    if(user){
         navigate(from, { replace: true });
     }
 
@@ -41,17 +44,15 @@ const Login = () => {
         return <Loading></Loading>
     }
 
-    if (user) {
-        // navigate(from, { replace: true });
-    }
 
     if (error) {
-        errorElement =
-        <p className='text-danger'>Error: {error.message}</p>
+        console.log('VUL');
+        errorElement = <p className='text-danger'>Wrong email or password!!!</p>
+            
     }
     if (error1) {
         errorElement1 =
-        <p className='text-danger'>Error: {error1.message}</p>
+            <p className='text-danger'>The email address you entered isn't connected to an account. Please enter valid email address. </p>
     }
     const navigateRegister = event => {
         navigate('/register');
@@ -69,38 +70,36 @@ const Login = () => {
 
     }
     return (
-<div className='login-container'>
-    
-<div className='container login mx-auto'>
-            <h2 className='text-primary text-center mt-4'>Please Login</h2>
-            <Form onSubmit={handleSubmit}>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                    
-                    <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
-                    
+        <div className='login-container'>
 
-                </Form.Group>
+            <div className='container login mx-auto'>
+                <h2 className='text-primary text-center mt-4'>Please Login</h2>
+                <Form onSubmit={handleSubmit}>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Control style={{ color: 'blue', border: '1px solid blue' }} ref={emailRef} type="email" placeholder="Enter email" required />
+                    </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicPassword">
-                    
-                    <Form.Control ref={passwordlRef} type="password" placeholder="Password" required />
-                </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                        <Form.Control style={{ color: 'blue', border: '1px solid blue' }} ref={passwordlRef} type="password" placeholder="Password" required />
+                    </Form.Group>
+                    {errorElement}
+                    {errorElement1}
+                    <Button variant="primary w-50 mx-auto d-block mb-2" type="submit">
+                        Login
+                    </Button>
+            
 
-                <Button variant="primary w-50 mx-auto d-block mb-2" type="submit">
-                    Login
-                </Button>
-                {errorElement1}
+                </Form>
+                <p className='text-danger'> New to Fruits Warehouse ? <span className='please-register text-primary' onClick={navigateRegister}>Please Register</span></p>
+                <p className='text-danger'> Forget Password ? <span className='please-register text-primary' onClick={resetPassword}>Reset Password</span></p>
 
-            </Form>
-            <p> New to Fruits Warehouse ? <span className='please-register text-primary' onClick={navigateRegister}>Please Register</span></p>
-            <p> Forget Password ? <span className='please-register text-primary' onClick={resetPassword}>Reset Password</span></p>
-            {errorElement}
-           
-            <SocialLogin></SocialLogin>
-            <ToastContainer />
-            {/* <PageTitle title="Login"></PageTitle> */}
+
+                <SocialLogin></SocialLogin>
+                <ToastContainer />
+
+            </div>
+            
         </div>
-</div>
 
     );
 };

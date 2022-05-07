@@ -1,79 +1,90 @@
-.fruits-container{
+.fruits-container {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
     margin-left: 100px;
 }
-.fruits-title{
+
+.fruits-title {
     text-align: center;
     color: rgb(26, 24, 24);
     margin-top: 25px;
-}
-.fruits{
-    background-image: url("https://i.ibb.co/XzjS7h2/bgg.jpg");
+
 }
 
-@media only screen  and (max-width:303px){
-    .fruits-container{
-        grid-template-columns: repeat(1,1fr);
-        margin-left:0;
+.fruits {
+    background-image: url("https://i.ibb.co/XzjS7h2/bgg.jpg");
+    font-family: 'Times New Roman', Times, serif;
+}
+
+@media only screen and (max-width:303px) {
+    .fruits-container {
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 0;
         margin-right: 0;
     }
 }
-@media only screen and ( min-width:304px) and (max-width:335px){
-    .fruits-container{
-        grid-template-columns: repeat(1,1fr);
-        margin-left:10px;
-        
+
+@media only screen and (min-width:304px) and (max-width:335px) {
+    .fruits-container {
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 10px;
+
     }
 }
-@media only screen and ( min-width:336px) and (max-width:350px){
-    .fruits-container{
-        grid-template-columns: repeat(1,1fr);
-        margin-left:15px;
-        
+
+@media only screen and (min-width:336px) and (max-width:350px) {
+    .fruits-container {
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 15px;
+
     }
 }
-@media only screen and ( min-width:351px) and (max-width:375px){
-    .fruits-container{
-        grid-template-columns: repeat(1,1fr);
-        margin-left:30px;
-        
+
+@media only screen and (min-width:351px) and (max-width:375px) {
+    .fruits-container {
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 30px;
+
     }
 }
-@media only screen and ( min-width:376px) and (max-width:400px){
-    .fruits-container{
-        grid-template-columns: repeat(1,1fr);
-        margin-left:42px;
-        
+
+@media only screen and (min-width:376px) and (max-width:400px) {
+    .fruits-container {
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 42px;
+
     }
 }
-@media only screen and ( min-width:401px) and (max-width:450px){
-    .fruits-container{
-        grid-template-columns: repeat(1,1fr);
-        margin-left:70px;
-        
+
+@media only screen and (min-width:401px) and (max-width:450px) {
+    .fruits-container {
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 70px;
+
     }
 }
-@media only screen and ( min-width:451px) and (max-width:500px){
-    .fruits-container{
-        grid-template-columns: repeat(1,1fr);
-        margin-left:85px;
-        
+
+@media only screen and (min-width:451px) and (max-width:500px) {
+    .fruits-container {
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 85px;
+
     }
 }
-@media only screen and ( min-width:501px) and (max-width:576px){
-    .fruits-container{
-        grid-template-columns: repeat(1,1fr);
-        margin-left:100px;
-        
+
+@media only screen and (min-width:501px) and (max-width:576px) {
+    .fruits-container {
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 100px;
+
     }
 }
 
 
-@media only screen and ( min-width:577px)and (max-width:992px){
-    .fruits-container{
-        grid-template-columns: repeat(2,1fr);
+@media only screen and (min-width:577px)and (max-width:992px) {
+    .fruits-container {
+        grid-template-columns: repeat(2, 1fr);
         margin-left: 0;
     }
 }

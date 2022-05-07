@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 import './Inventory.css';
+import 'animate.css';
 
 const Inventory = () => {
     const { fruitId } = useParams();
@@ -49,12 +50,13 @@ const Inventory = () => {
         })
             .then(res => res.json())
             .then(data => { })
+            e.target.reset();
     }
 
 
     return (
-        <div className='inventory-container'>
-            <div className='fruit-container'>
+        <div className='inventory-container '>
+            <div className='fruit-container animate__animated animate__zoomIn'>
                 <img className='image' src={fruit.img} alt="" />
                 <h3 className='text-success'>{fruit.name}</h3>
                 <p className='fs-6'>ID: {fruit._id}</p>
@@ -74,7 +76,7 @@ const Inventory = () => {
             </div>
             <div className='text-center manage-inventory'>
             <Link to="/manage-inventory">
-                <button className='btn btn-danger button'>Manage Inventory</button>
+                <button className='btn btn-danger button animate__animated animate__fadeInBottomLeft'>Manage Inventory</button>
             </Link>
             </div>
         </div>

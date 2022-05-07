@@ -18,14 +18,15 @@ const AddNewItem = () => {
           body: JSON.stringify(data)
       })
       .then(res=>res.json())
+      
       .then(result=>{})
       reset();
     };
     return (
        <div className='addItemContainer'>
-            <div className='w-25 mx-auto addItemForm'>
+            <div className=' mx-auto addItemForm'>
             <p className='fw-bold fs-4 text-success mt-5'>ADD A ITEM</p>
-            <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
+            <form className='d-flex flex-column animate__animated animate__zoomIn' onSubmit={handleSubmit(onSubmit)}>
       <input className='mb-3' placeholder='Product Name' {...register("name", { required: true, maxLength: 10 })} />
       <input className='mb-3' placeholder='Supplier Name' {...register("supplier", { required: true, maxLength: 15 })} />
       <textarea className='mb-3' placeholder='Description' {...register("description")} />

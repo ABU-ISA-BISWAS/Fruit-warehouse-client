@@ -6,6 +6,7 @@
     margin: 20px;
     width: 260px;
     contain: content;
+    font-family: 'Times New Roman', Times, serif;
 }
 .position{
     position: fixed;

@@ -1,61 +1,71 @@
-.review-section{
+.review-section {
     background-image: url("https://i.ibb.co/XzjS7h2/bgg.jpg");
     margin-bottom: 30px;
+    font-family: 'Times New Roman', Times, serif;
 }
-.style{
+
+.style {
     display: flex;
     width: 50%;
-    
+
 }
-.style p{
+
+.style p {
     background-color: green;
     height: 4px;
     width: 50%;
     margin: 15px;
-    
+
 }
-.review-container{
+
+.review-container {
     width: 50%;
-    display: flex;  
+    display: flex;
 }
-.review{
+
+.review {
     text-align: left;
     width: 50%;
     margin-right: 20px;
     margin-left: 20px;
 }
-.review p{
+
+.review p {
     font-size: 14px;
 }
-.review h4{
+
+.review h4 {
     font-size: 20px;
     font-weight: 700;
     color: blue;
 }
 
-@media only screen  and (max-width:576px){
-    .review-container{
+@media only screen and (max-width:576px) {
+    .review-container {
         display: grid;
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(1, 1fr);
         width: 90%;
-        margin-left:10px;
+        margin-left: 10px;
         margin-right: 0;
     }
-    .review{
+
+    .review {
         text-align: left;
         width: 100%;
         margin: 0px;
-        
+
     }
-    .style p{
+
+    .style p {
         width: 100%;
         margin: 0;
         margin: 10px;
-        
+
     }
-    .style{
-        
+
+    .style {
+
         width: 100%;
-        
+
     }
 }

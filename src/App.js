@@ -11,6 +11,9 @@ import ManageInventory from './pages/ManageInventory/ManageInventory';
 import UpdateProduct from './pages/UpdateProduct/UpdateProduct';
 import AddNewItem from './pages/AddNewItem/AddNewItem';
 import MyItems from './pages/MyItems/MyItems';
+import NotFound from './pages/NotFound/NotFound';
+import Blogs from './pages/Blogs/Blogs';
+import About from './pages/About/About';
 
 
 function App() {
@@ -26,6 +29,9 @@ function App() {
         <Route path='/add-new-item' element={<RequireAuth><AddNewItem></AddNewItem></RequireAuth>}></Route>
         <Route path='/myitems' element={<RequireAuth><MyItems></MyItems></RequireAuth>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/about' element={<About></About>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
