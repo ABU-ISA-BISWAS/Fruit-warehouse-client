@@ -2,11 +2,12 @@
  Live Link[FRUIT WAREHOUSE](https://github.com/facebook/create-react-app).
 
  # features and functionality
- ◉
- ◉
- ◉
- ◉
- ◉
+ ◉ Firebase authentication
+ ◉ Show my items based on user
+ ◉ Delete, Update Price,Restock ,Deliver 
+ ◉ Responsive Design 
+ ◉ MongoDB 
+ ◉ Animation
 
 ## Available Scripts
 
