@@ -1,5 +1,5 @@
 # FRUIT WAREHOUSE
- Live Link[FRUIT WAREHOUSE](https://github.com/facebook/create-react-app).
+ Live Link[FRUIT WAREHOUSE](https://fruits-warehouse-fffdc.firebaseapp.com/).
 
  # features and functionality
  ◉ Firebase authentication
@@ -9,6 +9,7 @@
  ◉ MongoDB 
  ◉ Animation
 
+StackOverflow Link[StackOverflow Link](https://stackoverflow.com/questions/72142849/in-react-js-how-can-i-set-footer-component-at-the-bottome-of-all-pages-either-t).
 ## Available Scripts
 
 In the project directory, you can run:

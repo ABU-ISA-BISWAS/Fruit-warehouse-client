@@ -7,7 +7,7 @@ const UpdateProduct = () => {
     const [fruit, setFruit] = useState({});
   
     useEffect(() => {
-        const url = `http://localhost:5000/fruit/${fruitId}`;
+        const url = `https://frozen-sierra-44073.herokuapp.com/fruit/${fruitId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setFruit(data));
@@ -22,7 +22,7 @@ const UpdateProduct = () => {
         const newFruit = { ...fruit, price: newPrice }
         setFruit(newFruit);
 
-        const url = `http://localhost:5000/fruit/${fruitId}`;
+        const url = `https://frozen-sierra-44073.herokuapp.com/fruit/${fruitId}`;
         fetch(url, {
             method: 'PUT',
             headers: {

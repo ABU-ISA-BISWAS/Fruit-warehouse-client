@@ -9,7 +9,7 @@ const AddNewItem = () => {
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data => {
       
-      const url =`http://localhost:5000/fruit`;
+      const url =`https://frozen-sierra-44073.herokuapp.com/fruit`;
       fetch(url,{
           method:'POST',
           headers:{

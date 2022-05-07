@@ -15,7 +15,7 @@ const ManageInventory = () => {
     }
 
     useEffect(() => {
-        fetch('http://localhost:5000/fruit')
+        fetch('https://frozen-sierra-44073.herokuapp.com/fruit')
             .then(res => res.json())
             .then(data => setFruits(data))
     }, []);
@@ -23,7 +23,7 @@ const ManageInventory = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            const url = `http://localhost:5000/fruit/${id}`;
+            const url = `https://frozen-sierra-44073.herokuapp.com/fruit/${id}`;
             fetch(url, {
                 method: 'DELETE',
 

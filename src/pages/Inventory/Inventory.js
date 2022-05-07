@@ -9,7 +9,7 @@ const Inventory = () => {
     const [fruit, setFruit] = useState({});
 
     useEffect(() => {
-        const url = `http://localhost:5000/fruit/${fruitId}`;
+        const url = `https://frozen-sierra-44073.herokuapp.com/fruit/${fruitId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setFruit(data));
@@ -21,7 +21,7 @@ const Inventory = () => {
         const newFruit = { ...fruit, quantity: newQuantity }
         setFruit(newFruit);
 
-        const url = `http://localhost:5000/fruit/${fruitId}`;
+        const url = `https://frozen-sierra-44073.herokuapp.com/fruit/${fruitId}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -40,7 +40,7 @@ const Inventory = () => {
         const newFruit = { ...fruit, quantity: newQuantity }
         setFruit(newFruit);
 
-        const url = `http://localhost:5000/fruit/${fruitId}`;
+        const url = `https://frozen-sierra-44073.herokuapp.com/fruit/${fruitId}`;
         fetch(url, {
             method: 'PUT',
             headers: {

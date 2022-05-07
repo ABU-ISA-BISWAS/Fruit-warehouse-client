@@ -16,7 +16,7 @@ const MyItems = () => {
     useEffect(() => {
         const getItems = async () => {
             const email = user.email;
-            const url = `http://localhost:5000/fruits?email=${email}`;
+            const url = `https://frozen-sierra-44073.herokuapp.com/fruits?email=${email}`;
             try {
                 const { data } = await axios.get(url, {
                     headers: {
@@ -40,7 +40,7 @@ const MyItems = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            const url = `http://localhost:5000/fruit/${id}`;
+            const url = `https://frozen-sierra-44073.herokuapp.com/fruit/${id}`;
             fetch(url, {
                 method: 'DELETE',
 

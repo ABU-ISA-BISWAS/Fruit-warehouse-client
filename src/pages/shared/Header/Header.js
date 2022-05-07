@@ -12,9 +12,10 @@ const Header = () => {
         signOut(auth);
     }
     const [user] = useAuthState(auth);
+    console.log(user)
 
     return (
-        <>
+        <div className='header'>
             <Navbar collapseOnSelect sticky="top" expand="lg" bg="dark" variant="dark">
                 <Container>
                     <Navbar.Brand as={Link} to="/">
@@ -65,7 +66,19 @@ const Header = () => {
                         <Nav>
                             {
                                 user ?
+                                    <Nav.Link as={Link} to="/myitems">
+                                       <p className='mt-3 text-info fw-bold userName'>{user.displayName}</p>
+                                    </Nav.Link>
+                                    :
+                                    <></>
+                            }
+                        </Nav>
+
+                        <Nav>
+                            {
+                                user ?
                                     <button className='btn btn-danger text-decoration-none fw-bold' onClick={handleSignout}>Sign Out</button>
+                                    
                                     :
                                     <Nav.Link as={Link} to="/login">
                                         Login
@@ -76,7 +89,7 @@ const Header = () => {
             </Navbar>
 
 
-        </>
+        </div>
     );
 };
 
